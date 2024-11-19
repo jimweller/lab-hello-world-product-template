@@ -1,0 +1,15 @@
+name: Hello Github
+on:
+  workflow_dispatch:
+
+jobs:
+  hello-world:
+    name: Hello Github
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        
+      - name: Hello Github
+        id: hello-github
+        uses: ExampleCoDept/fcc-demo-hello-world-core/hello-github@main

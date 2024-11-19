@@ -1,0 +1,19 @@
+name: Goodbye AWS
+on:
+  workflow_dispatch:
+
+permissions:
+      id-token: write   # This is required for requesting the JWT
+      contents: read    # This is required for actions/checkout
+      
+jobs:
+  hello-world:
+    name: Goodbye AWS
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Goodbye AWS
+        id: goodbye-aws
+        uses: ExampleCoDept/fcc-demo-hello-world-core/goodbye-aws@main
+        with:
+          suffix: ${{ github.actor}}
